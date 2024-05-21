@@ -33,14 +33,14 @@ ul{list-style:none; padding: 0;}
   --color-main: #1ECAD3;
 }
  
-html, body {font-family: 'Geometria'; font-weight: 500; color: #76777A; font-size:19px;line-height: 1.25;font-size: 19px;box-sizing: border-box;color: #76777A;}
-body {overflow-x: hidden;}
+html, body {font-family: 'Geometria'; font-weight: 500; color: #76777A; font-size:19px;line-height: 1.25;font-size: 19px;box-sizing: border-box;color: #76777A;overflow-x: hidden;}
+body {/*! overflow-x: hidden; */}
 h1{font-size: 31px;text-transform: uppercase;max-width: 425px;}
 h2{font-size: 38px;font-weight: 500;}
 
  
 
-header{background-color: var(--color-main);position: relative;z-index: 1;}
+header{background-color: var(--color-main);position: relative;z-index: 1;border-bottom: solid 1px var(--color-main);}
 header .container{display: flex;justify-content: space-between;max-width: 1070px;}
 .container{width: 100%;max-width: 1276px;padding: 0 23px;margin: 0 auto;}
 .header-logo{height: 70px;display: flex;}
@@ -57,11 +57,11 @@ header .container{display: flex;justify-content: space-between;max-width: 1070px
 .top-img{font-size: 0;background-image: url(../img/top-pattern.png);background-size: auto 100%;}
 .top-img img {height: 458px;margin: 0 auto;display: block;transform: translateX(-48.2%);}
 .top-text{position: absolute;top: 0;left: 50%;width: 580px;transform: translateX(calc(50% - 156px));padding-top: 53px;display: flex;flex-wrap: wrap;gap: 64px 34px;}
-.top-text-list{font-size: 24px;color: #fff;display: flex;flex-direction: column;gap: 15px;}
+.top-text-list{font-size: 24px;color: #fff;display: flex;flex-direction: column;gap: 0.6em;}
 .packs{display: flex;justify-content: space-between;align-items: flex-end;padding-top: 37px;padding-bottom: 35px;}
 .packs-left{width: 54.9%;}
 .packs-left-img{width: 100%;}
-.packs-icons{display: flex;margin-top: 22px;}
+.packs-icons{display: flex;margin-top: 22px;gap: 8px;justify-content: flex-start;}
 .packs-icon-item{display: flex;max-width: 329px;align-items: flex-start;gap: 12px;}
 .packs-icon-item img{width: 58px;flex: 1 1 auto;}
 .packs-icon-item-text{font-size: 19px;}
@@ -80,10 +80,10 @@ header .container{display: flex;justify-content: space-between;max-width: 1070px
 .diag-list{display:none}
 ul.styled li{padding-left: 21px;position: relative;line-height: 1.3;}
 ul.styled li:before{content:"";position: absolute; width: 6px; height: 6px; background-color: currentColor;border-radius: 59%;left: 0;top: 12px;}
-.color1{}
-.color2{}
-.color3{}
-.color4{}
+.color1{color: #1ECAD3;}
+.color2{color: #4BB8D8;}
+.color3{color: #57A6D9;}
+.color4{color: #9590CB;}
 .color5{}
 .mehanism{display: flex;gap: 10px;margin: 44px 0;}
 .mehanism-left{width: 35%;}
@@ -113,3 +113,130 @@ ul.styled li:before{content:"";position: absolute; width: 6px; height: 6px; back
 .footer-notes{font-size: 12px;text-align: center;}
 .footer-green{background-color: var(--color-main);padding: 16px 0 3px 0;}
 .legal{width: 100%;}
+
+
+@media (max-width: 1500px) {
+	.top-img img{transform: translateX(-46%);}
+	.top-text{transform: translateX(calc(50% - 215px));}
+}
+
+
+@media (max-width: 1360px) {
+	h1{font-size: 30px;}
+	.top-text-list {font-size: 20px;}
+	.top-img img{height: 400px;}
+	h2{font-size: 36px;}
+}
+
+@media (max-width: 1200px) {
+	body {font-size: 16px;}
+	h1{font-size: 29px;}
+	.top-text-list {font-size: 16px;}
+	.top-img img{height: 350px;}
+	.packs-icon-item-text{font-size: 16px}
+	.packs-icon-item{max-width: 264px;}
+	.packs-right{width: 45%}
+	h2{font-size: 32px;}
+	.why-item p {font-size: 16px;}
+}
+
+@media (max-width: 1024px) { 
+	body {font-size: 14px;}
+	h1{font-size: 19px;max-width: 278px;}
+	.top-text-list {font-size: 14px;}
+	.top-img img{height: 237px;transform: translateX(-54%);}
+	.top-text { transform: translateX(calc(50% - 215px)); width: 443px;gap: 15px 22px;}
+	.packs-icon-item-text{font-size: 14px}
+	.packs-icon-item img {width: 40px;}
+	.packs-icon-item{ max-width: 219px;}
+	.packs-left {width: 50%;}
+	h2{font-size: 30px;}
+	.why-item p{font-size: 14px}
+	.why-item img{width: 110px;}
+	.why-item{padding: 15px 10px 0px 10px;}
+	.how{justify-content: center;gap: 30px 60px;}
+	.how-column{width: calc(50% - 67px);}
+	.how-title{font-size: 20px;}
+	.apteki-title{font-size: 26px;margin-bottom: 0;}
+	.apteki-item{width: 170px;height: 30px;}
+	.footer-wrapper{gap: 20px;}
+	.mehanism-title{font-size: 20px;}
+}
+
+@media (max-width: 768px) { 
+	h1{max-width: 323px;width: 100%;font-size: 22px;letter-spacing: 0.02em;margin-right: calc(100% - 323px);line-height: 1.1;margin-bottom: 5px;}
+	h2{font-size: 17px;}
+	header{}
+	header .container{padding: 0 47px;}
+	ul.styled li::before { width: 3px;height: 3px;left: 0;top: 6px;}
+	.container{}
+	.header-logo{width: 123px;height: 42px;}
+	.header-logo-img{width: 100%;height: auto;}
+	.header-menu{display: none;}
+	.header-menu > li, .header-menu >li>a {}
+	.header-menu > li:hover, .header-menu >li>a:hover{ }
+	.header-menu > li:hover > ul{ }
+	.header-submenu{}
+	.header-submenu a{}
+	.header-submenu {}
+	.header-submenu li {}
+	.top{flex-direction: column-reverse;display: flex;background-image: url(../img/top-pattern.png);}
+	.top-img{position: static;}
+	.top-img img {transform: none;height: auto;width: 102%;margin-left: -5%;margin-top: -5%;}
+	.top-text{position: static;width: 100%;transform: none;padding: 18px 46px;}
+	.top-text-list{font-size: 12px;}
+	.packs{flex-direction: column;padding-bottom: 10px;}
+	.packs-left{width: 100%;/*! padding-left: 9%; */margin-top: -6%;border-bottom: solid 1px var(--color-main);padding-bottom: 17px;margin-bottom: 20px;}
+	.packs-left-img{padding-left: 10%;}
+	.packs-icons{margin-top: 13px;gap: 12%;padding-left: 10px;}
+	.packs-icon-item{gap: 6px;max-width: 158px;}
+	.packs-icon-item img{width: 34px;}
+	.packs-icon-item-text{font-size: 10px;}
+	.packs-right{width: 100%;}
+	.packs-right-img{width: 100%;padding-left: 10%;padding-right: 18%;}
+	.section-title{}
+	.why{flex-direction: column;}
+	.why-item{width: 100% !important;display: flex;}
+	.why-item:last-child{}
+	.why-item img{}
+	.why-item p{}
+	.notes{}
+	.diag{}
+	.diag-picture{}
+	.diag-picture img{}
+	.diag-list{display: flex;flex-direction: column;}
+	ul.styled li{padding-left: 11px;}
+	ul.styled {gap: 0.35em;}
+	.color1{}
+	.color2{}
+	.color3{}
+	.color4{}
+	.color5{color: #B47AAF;}
+	.mehanism{}
+	.mehanism-left{}
+	.mehanism-title{}
+	.mehanism-title b{}
+	.color-main{}
+	.mehanism-img{}
+	.mehanism-img img{}
+	.mehanism-right{}
+	.how{}
+	.how-column{}
+	.how-title{}
+	.how-list{}
+	.how-item{}
+	.how-item img{}
+	.apteki-wrapper{}
+	.apteki-group{}
+	.apteki-title{}
+	.apteki-item{}
+	.apteki-item img{}
+	.apteki-item a{}
+	.footer-grey{}
+	.footer-wrapper{}
+	.footer-logo{}
+	.footer-contacts{}
+	.footer-notes{}
+	.footer-green{}
+	.legal{}
+}
