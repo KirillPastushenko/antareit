@@ -30,4 +30,17 @@ $(document).ready(function(){
     $(this).closest('.effect-text-block').toggleClass('active');
   })
 
+
+  $('a[href^="#"]').on('click', function(event) {
+    event.preventDefault();
+
+    var target = $(this.getAttribute('href'));
+
+    if( target.length ) {
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 800);  
+    }
+});
+
 })
