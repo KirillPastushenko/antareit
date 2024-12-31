@@ -27,10 +27,12 @@ $(document).ready(function(){
   })
 
   $('.effect-text-btn').on('click', function(){
+    $(this).toggleClass('active');
     $(this).closest('.effect-text-block').toggleClass('active');
   })
 
   $('.sources-title').on('click', function(){
+    $(this).toggleClass('active');
     $(this).next().toggleClass('active');
   })
 
