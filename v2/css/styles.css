@@ -383,4 +383,9 @@ ul.styled li:before{content:"";position: absolute; width: 6px; height: 6px; back
 	h2{}
 	.effect-wrapper h3{}
 	.effect-text-block-head {height: 101px;}
+	.text-block-title{font-size: 14px;}
+}
+
+@media (max-width: 376px) { 
+	.text-block-title{font-size: 10px;}
 }
