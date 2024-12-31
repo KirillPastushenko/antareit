@@ -30,6 +30,10 @@ $(document).ready(function(){
     $(this).closest('.effect-text-block').toggleClass('active');
   })
 
+  $('.sources-title').on('click', function(){
+    $(this).next().toggleClass('active');
+  })
+
 
   $('a[href^="#"]').on('click', function(event) {
     event.preventDefault();
